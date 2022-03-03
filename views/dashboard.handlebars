@@ -5,6 +5,11 @@
     <div>
       <label for="post-title">Title</label>
       <input type="text" id="post-title" name="post-title" />
+    <div>
+        <label id="OS">Select the OS you use</label>
+        <button id="Android" onlcick="androidOSHandler()">Android</button>
+        <button id="Apple" onclick="appleOSHandler()">Apple</button>
+      </div>
     </div>
     <div>
       <label for="post-url">Link</label>
@@ -17,6 +22,7 @@
 {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
+   <p id="myOS"></p>
   <ol>
     {{#each posts as |post|}}
     <li>
